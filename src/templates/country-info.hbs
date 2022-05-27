@@ -1,0 +1,7 @@
+<div><img src="{{flags.svg}}" >
+      <p>{{name.official}}</p></div>
+      <ul>
+        <li><span>Capital:</span> {{capital}}</li>
+        <li><span>Population:</span> {{population}}</li>
+        <li><span>Languages:</span> {{#each languages}}{{#unless @last}}{{this}}, {{/unless}}{{#if @last}}{{this}}{{/if}}{{/each}}</li>
+      </ul>
