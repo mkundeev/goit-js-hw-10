@@ -6,14 +6,11 @@ export default class NewApi{
     return fetch(`https://restcountries.com/v3.1/name/${this.name}?fields=name,capital,population,flags,languages`)
       .then(response => {
       if (!response.ok) {
-        Notiflix.Notify.failure("Oops, there is no country with that name")
-        clearOutput();
+        throw new Error('Error')
       }
       return response.json();
       })
-      .then((data) => {
-        return data
-    });
+      
     }
     
     set countryName(countryName){
